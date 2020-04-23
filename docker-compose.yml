@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    build: ./db
+    volumes: 
+      - ./db:/usr/src/app
+    ports: 
+      - 5555:5432
+
+  app:
+    build: ./server/src/
+    volumes: 
+        - ./server/src:/usr/src/app
+    ports:
+        - 5001:80
