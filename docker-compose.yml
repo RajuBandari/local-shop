@@ -14,7 +14,3 @@ services:
         - ./server/src:/usr/src/app
     ports:
         - 5001:80
-    links: 
-      - db
-    depends_on: 
-      - db
